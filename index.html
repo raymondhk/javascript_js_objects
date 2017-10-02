@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // Challenge 1
+    let students = [
+        {name: 'Remy', cohort: 'Jan'},
+        {name: 'Genevieve', cohort: 'March'},
+        {name: 'Chuck', cohort: 'Jan'},
+        {name: 'Osmund', cohort: 'June'},
+        {name: 'Nikki', cohort: 'June'},
+        {name: 'Boris', cohort: 'June'}
+    ];
+    // Print all of the students and their cohort
+    for(var i = 0; i < students.length; i++){
+        console.log("Name: " + students[i]['name'] + ", Cohort: " + students[i]['cohort'])
+    }
+    
+    // Challenge 2
+    let users = {
+        employees: [
+            {'first_name':  'Miguel', 'last_name' : 'Jones'},
+            {'first_name' : 'Ernie', 'last_name' : 'Bertson'},
+            {'first_name' : 'Nora', 'last_name' : 'Lu'},
+            {'first_name' : 'Sally', 'last_name' : 'Barkyoumb'}
+        ],
+        managers: [
+        {'first_name' : 'Lillian', 'last_name' : 'Chambers'},
+        {'first_name' : 'Gordon', 'last_name' : 'Poe'}
+        ]
+    };
+    // Print out numbered employees and managers with string count
+    // to look like:
+    // EMPLOYEES
+    // 1 - JONES, MIGUEL - 11
+    // 2 - BERTSON, ERNIE - 12
+    // 3 - LU, NORA - 6
+    // 4 - BARKYOUMB, SALLY - 14
+    // MANAGERS
+    // 1 - CHAMBERS, LILLIAN - 15
+    // 2 - POE, GORDON - 9
+    
+    employees = users['employees'];
+    let num = 1;
+    console.log('EMPLOYEES');
+    for(i = 0; i < employees.length; i++){
+        console.log(num + ' - ' + employees[i]['last_name'].toUpperCase() + ', ' + employees[i]['first_name'].toUpperCase() + ' - ' + (employees[i]['last_name'].length + employees[i]['first_name'].length));
+        num++;
+    }
+    managers = users['managers']
+    num = 1;
+    console.log('MANAGERS');
+    for(i = 0; i < managers.length; i++){
+        console.log(num + ' - ' + managers[i]['last_name'].toUpperCase() + ', ' + managers[i]['first_name'].toUpperCase() + ' - ' + (managers[i]['last_name'].length + managers[i]['first_name'].length));
+        num++;
+    }
+       
+
+
+</script>
+</html>
